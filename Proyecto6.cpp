@@ -20,6 +20,44 @@ using namespace std;
 
 int main()
 {
-    
+    char PeliName[20][50] = {};
+    char FechaLanzamiento[20][10] = {};
+    int opcion = 0;
+
+    do{
+        cout<<"\tMenu principal"<<endl;
+        cout<<"1. Mostrar peliculas desde las mas viejas a las mas nuevas"<<endl;
+        cout<<"2. Mostrar peliculas desde las mas nuevas a las mas viejas"<<endl;
+        cout<<"3. Mostrar peliculas de un anio en concreto"<<endl;
+        cout<<"4. Salir"<<endl;
+        cin>> opcion;
+        switch (opcion)
+        {
+            case 1:
+                do{
+                    opcion = 0;
+                    cout<<"pulse 1 para regresar al menu principal"<<endl;
+                    cin >> opcion;
+                }while(opcion != 1);
+            break;
+            
+            case 2 :
+                do{
+                    opcion = 0;
+                    cout<<"pulse 1 para regresar al menu principal"<<endl;
+                    cin >> opcion;
+                }while(opcion != 1);
+                break;
+
+            case 3:
+                do{
+                    opcion = 0;
+                    cout<<"pulse 1 para regresar al menu principal"<<endl;
+                    cin >> opcion;
+                }while(opcion != 1);
+            break;
+        }
+    }while ( opcion != 4);
+
     return 0;
 }
