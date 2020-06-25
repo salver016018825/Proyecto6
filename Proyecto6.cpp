@@ -48,6 +48,23 @@ int main()
             case 1:
                 do{
                     opcion = 0;
+                    
+                    //Se agrega algoritmo de burbuja
+                    int temp = 0;
+                    for(int i = 0; i < 10; i++)
+                    {
+                       for(int j = 0; j < 10; j++)
+                        {
+                            if(numeros[j] > numeros[j+1])
+                            {
+                                temp = numeros[j];
+                                numeros[j] = numeros[j+1];
+                                numeros[j+1] = temp;
+                            }
+                        }
+                    }
+
+
                     cout<<"pulse 1 para regresar al menu principal"<<endl;
                     cin >> opcion;
                 }while(opcion != 1);
