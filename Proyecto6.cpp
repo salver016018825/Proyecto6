@@ -36,7 +36,7 @@ int main()
         cout<<i+1<<": "<<PeliName[i]<<"\t\t"<<FechaLanzamiento[i]<<endl;
     }
 
-    /*do{
+   do{
         cout<<"\tMenu principal"<<endl;
         cout<<"1. Mostrar peliculas desde las mas viejas a las mas nuevas"<<endl;
         cout<<"2. Mostrar peliculas desde las mas nuevas a las mas viejas"<<endl;
@@ -70,7 +70,7 @@ int main()
             break;
         }
     }while ( opcion != 4);
-    */
+    
 
     return 0;
 }
