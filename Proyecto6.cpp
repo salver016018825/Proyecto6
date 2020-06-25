@@ -20,7 +20,11 @@ using namespace std;
 
 int main()
 {
-    char PeliName[20][50] = {};
+    char PeliName[20][100] = {"El Abogado del Diablo","Matrix","El observador","Dulce noviembre","El reto",
+                            "Matrix Reloaded","El Animatrix","Matrix Revoluciones","Constantine","La casa del lago",
+                            "Toy Story 4","John Wick 1: Otro día para matar","John Wick 2: Un nuevo día para matar","John Wick 3: Parabellum","Insidious",
+                            "Insidious","The Crazies","Stake land","Kill List","La cabaña en el bosque"};
+                            
     char FechaLanzamiento[20][10] = {};
     int opcion = 0;
 
