@@ -33,12 +33,11 @@ int main(){
 		cin.get(nombres[i],20);
 		strcat(final[i],nombres[i]);
 	}
-	
-	cout<<"a: peliculas por años"<<endl;
-	cout<<"b: peliculas por titulo"<<endl;
-	cout<<"c: pelicula de un año"<<endl;
-	
+		
 	do{
+		cout<<"------------------------------\na: peliculas por años"<<endl;
+		cout<<"b: peliculas por titulo"<<endl;
+		cout<<"c: pelicula de un año"<<endl;
 		cout<<"ingrese una opcion: ";
 		cin>>opcion;
 		switch(opcion){
@@ -94,7 +93,7 @@ int main(){
 					cout << "NO hay registro de ese anio "<<endl;
 				}else
 				{
-					cout << "hay una fecha que coincide "<<fechas[index] << "\tInfo Peli " << final[index] <<endl;
+					cout <<"\tInfo Pelicula\n " << final[index] <<endl;
 				}			
 				
 			break;
