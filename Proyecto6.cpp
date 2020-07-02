@@ -20,21 +20,43 @@ using namespace std;
 
 int main()
 {
-    char PeliName[20][70] = {"El Abogado del Diablo","Matrix","El observador","Dulce noviembre","El reto",
-                            "Matrix Reloaded","El Animatrix","Matrix Revoluciones","Constantine","La casa del lago",
-                            "Toy Story 4","John Wick 1: Otro dia para matar","John Wick 2: Un nuevo dia para matar","John Wick 3: Parabellum","Insidious",
-                            "Insidious","The Crazies","Stake land","Kill List","La cabana en el bosque"};
+    char PeliName[20][70] = { "Matrix", "Stake land", "Dulce noviembre", "El reto", "La cabana en el bosque",     
+                            "El Animatrix", "John Wick 2: Un nuevo dia para matar", "Constantine", "Matrix Reloaded", "Toy Story 4",   
+                            "El observador", "John Wick 3: Parabellum", "Matrix Revoluciones", "Insidious 1", "Dulce noviembre",  
+                            "La casa del lago", "Kill List", "Insidious", "El Abogado del Diablo",  "John Wick 1: Otro dia para matar"
+                            };     
 
-    char  FechaLanzamiento[20][5] = {"1997","1999","2000","2001","2003"
-                                    ,"2003","2003","2003","2005","2006"
-                                    ,"2019","2014","2017","2019","2010"
-                                    ,"2010","2019","2020","2011","2011"}; /*posiblemente se haga un parceo*/
+                          /*"Matrix",                 //1999 
+                            "Stake land",             //2020
+                            "Dulce noviembre",        //2001
+                            "El reto",                //2003
+                            "La cabana en el bosque"  //2011 ->5
+                            "El Animatrix",           //2003  
+                            "John Wick 2: Un nuevo dia para matar",//2017
+                            "Constantine",            //2005  
+                            "Matrix Reloaded",        //2003 
+                            "Toy Story 4",            //2019  ->10
+                            "El observador",          //2000                            
+                            "John Wick 3: Parabellum",      //2019
+                            "Matrix Revoluciones",          //2003                                 
+                            "Insidious 1",                  //2010
+                            "Dulce noviembre",              //2001 ->15
+                            "La casa del lago",             //2006 
+                            "Kill List",                    //2011
+                            "Insidious",                    //2010  
+                            "El Abogado del Diablo",        //1997
+                            "John Wick 1: Otro dia para matar",    //2014      */                          
+
+    int  FechaLanzamiento[20] = {1999,2020,2001,2003,2011
+                                ,2003,2017,2005,2003,2019
+                                ,2000,2019,2003,2010,2001
+                                ,2006,2011,2010,1997,2014}; /*posiblemente se haga un parceo*/
     int opcion = 0;
 
-    for(int i = 0; i < 20; i++)
+    /*for(int i = 0; i < 20; i++)
     {
         cout<<i+1<<": "<<PeliName[i]<<"\t\t"<<FechaLanzamiento[i]<<endl;
-    }
+    }*/
 
    do{
         cout<<"\tMenu principal"<<endl;
@@ -50,20 +72,26 @@ int main()
                     opcion = 0;
                     
                     //Se agrega algoritmo de burbuja
-                    int temp = 0;
-                    for(int i = 0; i < 10; i++)
+                    int  temp = 0;
+                
+                    for(int i = 0; i < 20; i++)
                     {
-                       for(int j = 0; j < 10; j++)
+                       for(int j = 0; j < 20; j++)
                         {
-                            if(numeros[j] > numeros[j+1])
+                            if(FechaLanzamiento[j] > FechaLanzamiento[j+1])
                             {
-                                temp = numeros[j];
-                                numeros[j] = numeros[j+1];
-                                numeros[j+1] = temp;
+                                temp = FechaLanzamiento[j];
+                                FechaLanzamiento[j] = FechaLanzamiento[j+1];
+                                FechaLanzamiento[j+1] = temp;
                             }
                         }
                     }
-
+                    
+                    cout<<"Peliculas antiguas a mas recientes"<<endl;
+                    for(int i = 0; i <= 19; i++)
+                   {
+                        cout<<i+1<<" "<<FechaLanzamiento[i]<<endl;
+                   }
 
                     cout<<"pulse 1 para regresar al menu principal"<<endl;
                     cin >> opcion;
